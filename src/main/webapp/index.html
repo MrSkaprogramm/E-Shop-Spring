@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E shop</title>
+    <link href="${pageContext.request.contextPath}/style.css" rel="stylesheet" />
+	<link href="${pageContext.request.contextPath}/css/glider.css" rel="stylesheet" />
+</head>
+
+<body>
+
+        <div id="popup4"  class="desktop-menu-popup">
+            <a href="#header" class="desktop-menu_area"></a>
+            <div class="desktop-menu_body">
+                <div class="desktop-menu_content">
+                    <ul class="shop-menu-list">
+                        <li>
+                            <form action="/item/showCatalog" method="get">
+                                <input type="submit" value="Каталог"/>
+                            </form>
+                            <hr class="hr-menu">
+                        </li>
+                        <li>
+                            <form action="/item/showCatalog" method="post">
+                                <input type="hidden" name="command" value="show_catalog"/>
+                                <input type="submit" value="Акции"/>
+                            </form>
+                            <hr class="hr-menu">
+                        </li>
+                        <li>
+                            <form action="/item/showCatalog" method="post">
+                                <input type="hidden" name="command" value="show_catalog"/>
+                                <input type="submit" value="О нас"/>
+                            </form>
+                            <hr class="hr-menu">
+                        </li>
+                        <li>
+                            <form action="/item/showCatalog" method="post">
+                                <input type="hidden" name="command" value="show_catalog"/>
+                                <input type="submit" value="Контакты"/>
+                            </form>
+                            <hr class="hr-menu">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="container">
+                <div class="header-nav">
+                    <div class="shop-menu-button">
+                        <a href="#popup2" class="shop-menu-modal-open">
+                            <picture>
+                                <source media="(max-width: 760px)" srcset="./images/menu_button_tablet_mobile.svg">
+                                <img src="./images/menu_button.svg" alt="Меню">
+                            </picture>
+                        </a>
+                        <a href="#popup4" class="shop-menu2-modal-open">
+                            <picture>
+                                <source media="(max-width: 760px)" srcset="./images/menu_button_tablet_mobile.svg">
+                                <img src="./images/menu_button.svg" alt="Меню">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="info">
+                        <div class="info-info">
+                            <span class="info-up">Наш адрес:<br /></span>
+                            <span class="info-down">Минск, ул. Электроннокоммерческая, 1</span>
+                        </div>
+                        <div class="info-info">
+                            <span class="info-up">Обработка заказов:<br /></span>
+                            <span class="info-down">9:00-21:00 ежедневно</span>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Lorem ipsum" />
+                    </div>
+                        <div class="phone-header">
+                            <a href="tel:+375(29)642-80-80" class="phone-header-phone">+375(29)642-80-80</a>
+                        </div>
+                    <div class="shopping-cart">
+                        <form action="/user/identifyUser" class="input-auth" method="get">
+                            <input type="submit" value=" "/>
+                        </form>
+                    </div> 
+                    <div class="shopping-cart">
+                        <form action="/cart/showCart" class="input-cart" method="post">
+                            <input type="hidden" name="command" value="show_cart"/>
+                            <input type="submit" value=" "/>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-center">
+                    <div class="header-row">
+                        <div class="header-content">
+                            <div class="title-content">
+                                <p>E shop</p>
+                            </div>
+                        </div>
+                        <div class="header-btn">
+                            <form action="/item/showCatalog" method="get">
+                                <input type="submit" value="Каталог"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+            <div class="flowers-row">
+                    <div class="flowers-icon">
+                        <img src="images/delivery.jpg" alt="Розы" />
+                        <a href="#" class="icons-text">Бесплатная доставка</a>
+                        <h2>При заказе от 100 рублей, Вы получаете Ваш заказ бесплатно</h2>
+                    </div>
+                    <div class="flowers-icon">
+                        <img src="images/call.jpg" alt="Розы" />
+                        <a href="#" class="icons-text" class="flowers-a">Поддержка 24/7</a>
+                        <h2 class="flowers-row-h2">На связи с клиентами 24 часа в сутки, 7 дней в неделю</h2>
+                    </div>
+                    <div class="flowers-icon">
+                        <img src="images/return.jpg" alt="Розы" />
+                        <a href="#" class="icons-text">14 дней на возврат</a>
+                        <h2>Простой возврат товара в течение 14 дней с даты покупки</h2>
+                    </div>
+                    <div class="flowers-icon">
+                        <img src="images/quality.png" alt="Розы" />
+                        <a href="#" class="icons-text">Гарантия качества</a>
+                        <h2>Вся продукция имеет необходимые сертификаты</h2>
+                    </div>
+                    <div class="flowers-icon">
+                        <img src="images/credit.jpg" alt="Розы" />
+                        <a href="#" class="icons-text">Выгодная рассрочка</a>
+                        <h2>На хороших условиях от известного банка</h2>
+                    </div>
+            </div>
+        </section>
+
+        <div class="middle-nav-discount">
+            <div class="logo">
+                <img src="images/discount.png" alt="E-shop"/>
+            </div>
+            <div class="middle-nav-text">
+                <h1>Ваша клубная карта</h1>
+                <h2>Мы приятно удивляем наших  постояных клиентов</h2>
+            </div>
+        </div>
+
+        <div class="middle-nav">
+            
+            <div class="middle-nav-text">
+                <h1>Лучший магазин в мире</h1>
+                <h2>Лучший машазин с лучшими ценами. Самый большой ассортимент товаров в совокупности с лучшими скидками делает наших клентов довольными
+            покупками в нашем магазине</h2>
+            </div>
+            <div class="logo">
+                <img src="images/shopping.png" alt="E-shop"/>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="E-shop"/>
+            </div>
+
+            <div class="info-footer">
+                <div class="shop-menu-info-text">
+                    <p class="shop-menu-info-up">Наш адрес:</p>
+                    <p class="shop-menu-info-down">Минск, ул. Электроннокоммерческая, 1</p>
+                </div>
+                <div class="shop-menu-info-text">
+                    <p class="shop-menu-info-up">Обработка заказов:</p>
+                    <p class="shop-menu-info-down">9:00-21:00 ежедневно</p>
+                </div>
+                <div class="shop-menu-info-text">
+                    <p class="shop-menu-info-up">E-mail:</p>
+                    <p class="shop-menu-info-down">e-shop@gmail.com</p>
+                </div>
+            </div>
+            <p>Телефоны:</p>
+            <div class="info-phone-footer">
+                <div class="phone-modal">
+                    <a href="tel:+375(29)612-34-56"><span class="phone-modal-first">+375 (29)&nbsp</span><span class="phone-modal-second">612-34-56</span></a>
+                </div>
+                <div class="phone-modal">
+                    <a href="tel:+375(29)612-34-56"><span class="phone-modal-first">+375 (29)&nbsp</span><span class="phone-modal-second">623-45-56</span></a>
+                    </div>
+                <div class="phone-modal">
+                    <a href="tel:+375(29)612-34-56"><span class="phone-modal-first">+375 (29)&nbsp</span><span class="phone-modal-second">623-45-56</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="payment_systems">
+                <img src="images/visa.png" alt="Поиск">
+                <img src="images/visa_secure.png" alt="Поиск">
+                <img src="images/mastercard.png" alt="Поиск">
+                <img src="images/mastercard_id_check.png" alt="Поиск">
+                <img src="images/mir_accept.png" alt="Поиск">
+                <img src="images/belkart.png" alt="Поиск">
+                <img src="images/mir.png" alt="Поиск">
+                <img src="images/belkart_internet_password.png" alt="Поиск">
+                <img src="images/assist.png" alt="Поиск">
+        </div>
+
+
+        
+    <script src="js/glider.min.js"></script>
+        <script>
+         new Glider(document.querySelector('.glider'), {
+        slidesToScroll: 1,
+        slidesToShow: 10,
+        draggable: true,
+        dots: '.dots',
+        arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+        }
+        });
+        </script>
+    </script>
+</body>
+</html>
