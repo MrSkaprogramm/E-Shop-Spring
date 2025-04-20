@@ -39,6 +39,11 @@ public class Controller {
         this.userService = userService;
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "forward:/index.html";
+    }
+
     @PostMapping("/addItem")
     public String addItem(@RequestParam String name,
                           @RequestParam String itemInfo,
@@ -191,10 +196,6 @@ public class Controller {
         } catch (NumberFormatException e) {
             LOGGER.error("Invalid item ID format", e);
             model.addAttribute("errorMessage", "Invalid item ID format.");
-            return "errorPage"; // Имя JSP страницы для обработки ошибок
-        } catch (ServiceException e) {
-            LOGGER.error("Error while deleting item from cart", e);
-            model.addAttribute("errorMessage", "An error occurred while deleting the item from cart.");
             return "errorPage"; // Имя JSP страницы для обработки ошибок
         }
     }

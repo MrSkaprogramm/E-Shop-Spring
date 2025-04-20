@@ -1,7 +1,9 @@
 package eshop.spring.tr.service.validation.impl;
 
 import eshop.spring.tr.service.validation.PaymentValidatorInterface;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PaymentValidator implements PaymentValidatorInterface {
     private static final String BANK_CARD_NUM_REGEX = "[0-9]{16}";
     private static final String EXPIRING_DATE_REGEX = "[0-9]{4}";

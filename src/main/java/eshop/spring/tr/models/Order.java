@@ -12,7 +12,8 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderId;
+    @Embedded
     private Payment payment;
-    @Column(name = "brand", nullable = false)
+    @Column(name = "orderStatus", nullable = false)
     private boolean orderStatus;
 }

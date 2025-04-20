@@ -1,5 +1,6 @@
 package eshop.spring.tr.models.builder;
 
+import eshop.spring.tr.models.Role;
 import eshop.spring.tr.models.User;
 import eshop.spring.tr.models.UserStatus;
 

@@ -1,7 +1,9 @@
 package eshop.spring.tr.service.validation.impl;
 
 import eshop.spring.tr.service.validation.ItemValidatorInterface;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ItemValidator implements ItemValidatorInterface {
     private static final String ITEM_NAME_REGEX = "[A-zА-я]{1,15}";
     private static final String PRICE_REGEX = "[0-9]{1,9}";

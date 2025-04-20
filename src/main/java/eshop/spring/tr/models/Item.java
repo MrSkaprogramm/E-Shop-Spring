@@ -12,10 +12,10 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int itemId;
-    @Column(name = "brand", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "brand", nullable = false)
+    @Column(name = "itemInfo", nullable = false)
     private String itemInfo;
-    @Column(name = "brand", nullable = false)
+    @Column(name = "price", nullable = false)
     private int price;
 }

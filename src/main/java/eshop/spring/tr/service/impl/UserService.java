@@ -35,10 +35,9 @@ public class UserService implements UserServiceInterface {
             throw new ServiceException("Wrong authorization data");
         }
 
-        UserDaoInterface userDaoInterface = DaoProvider.getDaoprovider().getUserDao();
         User user;
         try {
-            user = userDaoInterface.userAuth(login, password);
+            user = userDao.userAuth(login, password);
         } catch (DaoException e) {
             throw new ServiceException(e.getMessage());
         }

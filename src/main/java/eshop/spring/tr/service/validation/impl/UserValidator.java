@@ -1,7 +1,9 @@
 package eshop.spring.tr.service.validation.impl;
 
 import eshop.spring.tr.service.validation.UserValidatorInterface;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserValidator implements UserValidatorInterface {
     private static final String FIO_REGEX = "^[]A-Za-z ,-\\\\.`]{2,45}";
     private static final String EMAIL_REGEX =
